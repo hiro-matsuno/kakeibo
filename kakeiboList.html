@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src='jquery-2.1.1.min.js'></script>
+<script src='kakeiboList.js'></script>
+<title>家計一覧</title>
+</head>
+<body>
+	<div id='title'>
+		<h1>家計一覧</h1>
+	</div>
+	<div id='ichiran_content'>
+		<table id="listTbl" border="1">
+			<tr>
+				<th>日付</th>
+				<th>費目</th>
+				<th>摘要</th>
+				<th>金額</th>
+			</tr>
+			<tbody class="listBody">
+				<td><input type="hidden" class='listID' value="" /><label class="listHiduke"></label></td>
+				<td><label class="listHimoku"></label></td>
+				<td><label class="listTekiyou"></label></td>
+				<td><label class="listMoney"></label></td>
+			</tbody>
+		</table>
+	</div>
+	<div id='end_content'>
+		<a href='kakeibo.html'>家計簿入力へ</a>
+	</div>
+</body>
+</html>

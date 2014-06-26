@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src='jquery-2.1.1.min.js'></script>
+<script src='kakeibo.js'></script>
+<title>家計簿入力</title>
+</head>
+<body>
+	<div id="header">
+		<h1>家計簿入力</h1>
+	</div>
+	<div id="content">
+		<div id='hiduke_content'>
+			<label>入力年月日</label><br />
+			<label id='hiduke'></label>
+		</div>
+		<input type="hidden" id="inputYMDHM" value="" />
+		<div id='kamoku_content' width="100%">
+			<label>科目</label><br />
+			<select id='kamoku' width="100%">
+				<option value='1'>食費</option>
+				<option value='2'>交通費</option>
+				<option value='3'>交遊費</option>
+				<option value='4'>光熱費</option>
+				<option value='5'>その他</option>
+			</select>
+		</div>
+		<div id="gaiyou_content" width="100%">
+			<label>摘要</label><br />
+			<input type="text" id="tekiyou" value="" width="100%" />
+		</div>
+		<div id="money_content" width="100%">
+			<label>金額</label><br />
+			<input type="number" id="money" value="0" />
+		</div>
+		<div id="button_content">
+			<input type="button" id="add_content" onclick="add_new()" value="追加" />
+			<input type="button" id="clear_content" onclick="content_clear()" value="クリア" />			
+		</div>
+	</div>
+	<div id='end_content'>
+		<a href="kakeiboList.html">家計簿一覧へ</a><br />
+		<a href='kakeibo.zip'>全ソース</a><br />
+		<label>このアプリはMITライセンスで公開しております。改変時はhiro.matsuno at gmail.comにご連絡下さい。atは書き換えてくださいね。</label><br />
+		<a href='http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license'>MITライセンスの全文（日本語訳）</a>
+
+	</div>
+
+</body>
+</html>
