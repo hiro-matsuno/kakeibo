@@ -19,10 +19,10 @@ function kakeiboListShow(){
 		tekiyou = data['tekiyou'];
 		money = data['money'];
 //		alert('money='+money);
-		if(money != "" || money != null || money != 'undefined' || money != 0){
-			money = addFigure(data['money']);
-		}else if(money == "" || money == null || money == 'undefined' || money == 0){
+		if(money == "" || money == null || money == 'undefined' || money == 0){
 			money = "";
+		}else if(money != "" || money != null || money != 'undefined' || money != 0){
+			money = addFigure(data['money']);
 		}
 		//データの表示
 		$('.listBody tr .listHiduke').eq(-1).text(hiduke);
