@@ -7,6 +7,7 @@ $(function () {
 	kakeiboListShow();
 });
 
+//家計簿データの取得及び表示
 function kakeiboListShow(){
 	for (i = 0; i < localStorage.length; i++){
 		//IDの取得
@@ -18,7 +19,6 @@ function kakeiboListShow(){
 		kamoku = data['kamoku'];
 		tekiyou = data['tekiyou'];
 		money = data['money'];
-//		alert('money='+money);
 		if(money == "" || money == null || money == 'undefined' || money == 0){
 			money = "";
 		}else if(money != "" || money != null || money != 'undefined' || money != 0){
@@ -38,6 +38,7 @@ function kakeiboListShow(){
 	}
 }
 
+//カンマの追加
 function addFigure(str) {
 	var num = new String(str).replace(/,/g, "");
 	while(num != (num = num.replace(/^(-?\d+)(\d{3})/, "$1,$2")));

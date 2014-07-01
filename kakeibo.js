@@ -13,6 +13,7 @@ $(function () {
 	$('#money').val("0");
 });
 
+//現在日付の取得
 function nowDateYMD(){
 //	日付取得
 	nowDate = new Date();
@@ -23,6 +24,7 @@ function nowDateYMD(){
 	return nowYMD;
 }
 
+//現在日付と時刻の取得
 function thisDateHM(){
 //	日付取得
 	nowDate = new Date();
@@ -49,7 +51,9 @@ function thisDateHM(){
 	return nowYMD;
 }
 
+//データの追加
 function add_new(){
+	//データとIDの取得
 	ID = $('#inputYMDHM').val();
 	hiduke = $('#hiduke').text();
 	kamoku = $('#kamoku').val();
@@ -66,18 +70,16 @@ function add_new(){
 	}
 	tekiyou = $('#tekiyou').val();
 	money = $('#money').val();
-//	alert('kamoku='+kamokuName);
-//	alert('tekiyou='+tekiyou);
-//	alert('money='+money);
 	
+	//データの生成
 	data = {'hiduke':hiduke,'kamoku':kamokuName,'tekiyou':tekiyou,'money':money};
 	
-    /*for (key in data) {
-        alert(key + " : " + data[key]);
-    }*/
+	//localStorageに登録
 	localStorage.setItem(ID,JSON.stringify(data));
 }
 
+
+//入力内容のクリア
 function content_clear(){
 	$('#kamoku').val("1");
 	$('#tekiyou').val("");
